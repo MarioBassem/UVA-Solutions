@@ -51,6 +51,7 @@ int main()
                 else wrong++;
             }
         }
+
         printf("%d,%d\n",right,wrong);
         if(t) printf("\n");
     }
