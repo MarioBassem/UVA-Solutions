@@ -26,6 +26,8 @@ int extractNum()
 
 int main()
 {
+    freopen("in.txt","r",stdin);
+    freopen("out.txt","w",stdout);
     int n,t,x,y,a,b,right,wrong;
     cin>>t;
     char c;
