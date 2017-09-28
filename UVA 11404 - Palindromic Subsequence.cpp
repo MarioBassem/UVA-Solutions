@@ -2,7 +2,7 @@
 
 using namespace std;
 
-string s temp;
+string s, temp;
 pair<int, string> memo[1010][1010];
 
 pair<int, string> best(pair<int, string> a, pair<int, string> b)
