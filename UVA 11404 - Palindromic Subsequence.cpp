@@ -2,7 +2,7 @@
 
 using namespace std;
 
-string s, ans, temp;
+string s temp;
 pair<int, string> memo[1010][1010];
 
 pair<int, string> best(pair<int, string> a, pair<int, string> b)
@@ -32,7 +32,6 @@ pair<int, string> dp(int i, int j)
 int main()
 {
     while(cin>>s){
-        ans.clear();
         for(int i=0; i<s.length(); i++){
             for(int j=0; j<s.length(); j++)
                 memo[i][j].first = -1;
