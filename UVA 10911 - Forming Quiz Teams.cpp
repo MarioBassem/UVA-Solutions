@@ -12,9 +12,16 @@ vii in;
 
 double dp(int u)
 {
+    
+//  If all the 2*n bits in u are set ( all contestants are paired ) then
+//  this is a possible answer. 
     if(u == (1<<2*n) - 1) return 0.0;
+    
+//  If this state was reached before, return the answer.
     double &ret = memo[u];
     if(ret != -1.0) return ret;
+    
+// Try to find all other possible pairings.
     ret = inf;
     int temp;
     for(int i=0; i<2 * n; i++){
