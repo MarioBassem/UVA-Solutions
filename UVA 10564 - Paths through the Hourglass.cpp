@@ -3,8 +3,6 @@
 using namespace std;
 
 #define vii vector<vector<int> >
-#define vi vector<int>
-#define ii pair<int, int>
 #define inf 1000000000
 
 string path, ans;
@@ -76,12 +74,11 @@ int main()
             if(start == -1 && ans.size()) start = i;
 
         }
+        
         if(ans.size()){
             printf("%lld\n", t);
             cout<<start<<" "<<ans<<endl;
         }else printf("0\n\n");
 
     }
-
-
 }
