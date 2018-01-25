@@ -1,0 +1,23 @@
+#include <bits/stdc++.h>
+
+#define vii vector<vector<int> >
+#define vi vector<int>
+#define ii pair<int, int>
+
+#define ll long long
+
+using namespace std;
+
+int main()
+{
+    unsigned int n;
+    while(1){
+        scanf("%llu", &n);
+        if(!n) return 0;
+        unsigned int temp = sqrt(n);
+        if(temp * temp == n) printf("yes\n");
+        else printf("no\n");
+
+    }
+}
+
