@@ -1,0 +1,39 @@
+#include <bits/stdc++.h>
+
+#define vii vector<vector<int> >
+#define vi vector<int>
+#define ii pair<int, int>
+
+#define ll long long
+
+using namespace std;
+
+int main()
+{
+    int n, m, c;
+    while(1){
+        scanf("%d%d%d", &n, &m, &c);
+        if(!n && !m && !c) return 0;
+        m-=8;
+        n-=8;
+        int ans = 0;
+        if(c){
+            ans = (m / 2 + 1) * (n / 2 + 1);
+            m--; n--;
+            if(m >= 0 && n >= 0) ans += (m / 2 + 1) * (n / 2 + 1);
+        }else{
+            if(m > 0){
+                m--;
+                ans = (m / 2 + 1) * (n / 2 + 1);
+                m++;
+            }
+            if(n > 0){
+                n--;
+                ans += (m / 2 + 1) * (n / 2 + 1);
+                n++;
+            }
+        }
+        printf("%d\n", ans);
+    }
+}
+
