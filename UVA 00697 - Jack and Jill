@@ -1,0 +1,37 @@
+#include <bits/stdc++.h>
+#define EPS 1e-9
+#define PI 3.14159265359
+
+using namespace std;
+
+int main()
+{
+    double up, d, l, b, p, down, v, L, V;
+    int tc = 0;
+    while(1){
+        scanf("%lf", &up);
+        if(up < 1.0) return 0;
+        scanf("%lf%lf%lf%lf%lf%lf", &d, &l, &b, &p, &down, &v);
+        L = l, V = v;
+        double time = 0, bin = b * 12 * 12 * 12;
+        while(v > EPS){
+            v -= b;
+            time += up + down + sqrt(2 * l / (12 * 32.2)) + l / p;
+            double temp = PI * d * d / 4;
+            l = (temp * l + bin) / temp;
+        }
+
+        if(tc)   puts("");
+        printf("Scenario %d:\n", ++tc);
+        printf("     up hill         %10.2lf sec\n", up);
+        printf("     well diameter   %10.2lf in\n", d);
+        printf("     water level     %10.2lf in\n", L);
+        printf("     bucket volume   %10.2lf cu ft\n", b);
+        printf("     bucket ascent rate%8.2lf in/sec\n", p);
+        printf("     down hill       %10.2lf sec\n", down);
+        printf("     required volume %10.2lf cu ft\n", V);
+        printf("     TIME REQUIRED   %10.2lf sec\n", time);
+
+    }
+}
+
