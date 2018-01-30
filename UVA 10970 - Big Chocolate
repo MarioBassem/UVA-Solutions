@@ -1,0 +1,17 @@
+#include <bits/stdc++.h>
+#define EPS 1e-9
+#define PI 3.14159265359
+#define ii pair<int, int>
+
+typedef long long ll;
+
+using namespace std;
+
+int main()
+{
+    int m, n;
+    while(scanf("%d%d", &m, &n) == 2){
+        printf("%d\n", m - 1 + m * (n - 1));
+    }
+}
+
