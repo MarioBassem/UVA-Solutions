@@ -1,0 +1,22 @@
+#include <bits/stdc++.h>
+#define EPS 1e-9
+#define PI 3.14159265359
+#define ii pair<int, int>
+#define vi vector<int>
+#define vii vector<vector<int> >
+
+typedef long long ll;
+
+using namespace std;
+
+int main()
+{
+    int n, tc = 1;
+    while(1){
+        scanf("%d", &n);
+        if(n < 0) return 0;
+        int ans = ceil(log2(n));
+        printf("Case %d: %d\n", tc++, ans);
+    }
+}
+
